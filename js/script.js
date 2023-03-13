@@ -8,6 +8,7 @@
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 
+
 //Email section
 let verifiedEmailList = [
     'giuseppeluca@gmail.com',
@@ -20,6 +21,8 @@ let verifiedEmailList = [
 let emailBox = document.getElementById('email');
 
 const emailSubmit = document.getElementById('emailSubmit');
+
+
 // Email verification
 emailSubmit.addEventListener('click', function () {
     
@@ -50,7 +53,29 @@ emailSubmit.addEventListener('click', function () {
 
 
 
+// dice game section
 
+
+
+const diceSubmit = document.getElementById ('diceSubmit');
+
+
+diceSubmit.addEventListener('click', function () {
+
+    let userDice = rndNumber(1,6);
+    let computerDice = rndNumber(1,6); 
+
+    document.getElementById('user-dice').innerHTML += `<h3 class="text-white">${userDice}</h3>`
+    document.getElementById('computer-dice').innerHTML += `<h3 class="text-white">${computerDice}</h3>`
+
+    if (userDice > computerDice){
+        document.getElementById('winner').innerHTML = `<h3 class="text-success">Hai vinto!!</h3>`
+    }else{
+        document.getElementById('winner').innerHTML = `<h3 class="text-danger">Hai perso..</h3>`
+    }
+    
+
+})
 
 
 
