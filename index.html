@@ -16,18 +16,57 @@
 
 <!-- Header of the page with title -->
 <header>
-    <div class="header-wrapper">
+    <div class="header-wrapper mt-5">
         <!-- title and subtitle and img -->
-        <div class="d-flex justify-content-center flex-column align-items-center w-75 m-auto bg-danger text-white rounded-3">
+        <div class="d-flex justify-content-center flex-column align-items-center w-75 m-auto bg-primary text-white">
             <h1>Dice Game</h1>
             <h3>Tenta la fortuna!</h3>
         </div>
     </div>
 </header>
 
+<main>
+    <div class="wrapper w-75 m-auto d-flex flex-column align-items-center pt-5 bg-info">
+        <!-- Input email -->
+        <div class="card w-50 bg-transparent border-0">
+            <label for="email" class="text-white ">
+                <h4>Verifica la tua email prima di tirare i dadi!</h4>
+            </label>
+            <input type="email" name="email" id="email" placeholder="Inserisci la tua email"
+                class="rounded-5 border-0 p-2">
 
+            <!-- Email verified message -->
+            <div id="verified-email" class="pt-4 text-center"></div>
+        </div>
 
-    <script src="./js/script.js"></script>
+        <hr>
+        <!-- Dice Game -->
+        <div class="card bg-transparent border-0 w-100 d-flex justify-content-center align-items-center">
+            <button class="submit btn btn-warning w-10">Lancia il dado!</button>
+
+            <div class="d-flex justify-content-between w-100">
+                <!-- User result -->
+                <div id="user-dice" class="px-5 mx-5">
+                    <h2 class="text-white">Il tuo risultato</h2>
+                </div>
+
+                <!-- Computer result -->
+                <div id="computer-dice" class="px-5 mx-5">
+                    <h2 class="text-white">Il risultato del pc</h2>
+                </div>
+            </div>
+            
+            <!-- Winner -->
+            <div id="winner" class="bg-primary w-100 text-center text-danger">
+                
+            </div>
+
+        </div>
+    </div>
+    </div>
+</main>
+
+<script src="./js/script.js"></script>
 </body>
 
 </html>
