@@ -28,13 +28,13 @@
 <main>
     <div class="wrapper w-75 m-auto d-flex flex-column align-items-center pt-5 bg-info">
         <!-- Input email -->
-        <div class="card w-50 bg-transparent border-0">
+        <div class="card w-50 bg-transparent border-0 d-flex flex-column align-items-center">
             <label for="email" class="text-white ">
                 <h4>Verifica la tua email prima di tirare i dadi!</h4>
             </label>
             <input type="email" name="email" id="email" placeholder="Inserisci la tua email"
-                class="rounded-5 border-0 p-2">
-
+                class="rounded-5 border-0 p-2 w-75">
+            <button id="emailSubmit" class="btn btn-primary submit w-25 mt-3">Invia</button>
             <!-- Email verified message -->
             <div id="verified-email" class="pt-4 text-center"></div>
         </div>
@@ -58,7 +58,7 @@
             
             <!-- Winner -->
             <div id="winner" class="bg-primary w-100 text-center text-danger">
-                
+
             </div>
 
         </div>
