@@ -42,23 +42,25 @@
         <hr>
         <!-- Dice Game -->
         <div class="card bg-transparent border-0 w-100 d-flex justify-content-center align-items-center">
-            <button class="submit btn btn-warning w-10">Lancia il dado!</button>
+            <button id="diceSubmit" class="submit btn btn-warning w-10">Lancia il dado!</button>
 
             <div class="d-flex justify-content-between w-100">
                 <!-- User result -->
-                <div id="user-dice" class="px-5 mx-5">
+                <div id="user-dice" class="px-5 mx-5 text-center">
                     <h2 class="text-white">Il tuo risultato</h2>
                 </div>
 
                 <!-- Computer result -->
-                <div id="computer-dice" class="px-5 mx-5">
+                <div id="computer-dice" class="px-5 mx-5 text-center">
                     <h2 class="text-white">Il risultato del pc</h2>
                 </div>
             </div>
             
             <!-- Winner -->
-            <div id="winner" class="bg-primary w-100 text-center text-danger">
+            <div  class="bg-primary w-100 text-center d-flex justify-content-center align-items-center">
+                <div id="winner" class="bg-white w-50 rounded-2 my-3">
 
+                </div>
             </div>
 
         </div>
@@ -66,7 +68,9 @@
     </div>
 </main>
 
+<script src="./js/functionality.js"></script>
 <script src="./js/script.js"></script>
 </body>
 
 </html>
+
