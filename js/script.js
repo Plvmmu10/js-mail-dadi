@@ -27,10 +27,11 @@ const emailSubmit = document.getElementById('emailSubmit');
 emailSubmit.addEventListener('click', function () {
 
     let emailValue = emailBox.value;
+    // let emailVerified = emailValue.toTextLowerCase();
     let emailValid = false;
 
     for (i = 0; i < verifiedEmailList.length; i++) {
-        if (emailValue === verifiedEmailList[i]) {
+        if (emailValue.toLowerCase() === verifiedEmailList[i]) {
             emailValid = true;
         }
     }
@@ -65,16 +66,17 @@ diceSubmit.addEventListener('click', function () {
     let userDice = rndNumber(1, 6);
     let computerDice = rndNumber(1, 6);
 
-    document.getElementById('user-dice').innerHTML += `<h3 class="text-white">${userDice}</h3>`
-    document.getElementById('computer-dice').innerHTML += `<h3 class="text-white">${computerDice}</h3>`
+    document.getElementById('user-dice').innerHTML = `<h3 class="text-white">${userDice}</h3>`
+    document.getElementById('computer-dice').innerHTML = `<h3 class="text-white">${computerDice}</h3>`
 
     if (userDice > computerDice) {
-        document.getElementById('winner').innerHTML = `<h3 class="text-success">Hai vinto!!</h3>`
-    } else if (userDice === computerDice){
+        document.getElementById('winner').innerHTML = `<h3 class="text-success">Complimenti hai vinto!!</h3>`
+    } 
+    else if (userDice === computerDice){
         document.getElementById('winner').innerHTML = `<h3>Hai pareggiato</h3>`
     }
     else {
-        document.getElementById('winner').innerHTML = `<h3 class="text-danger">Hai perso..</h3>`
+        document.getElementById('winner').innerHTML = `<h3 class="text-danger">Hai perso, ritenta, sarai più fortunato</h3>`
     }
 
 
