@@ -24,14 +24,16 @@ const emailSubmit = document.getElementById('emailSubmit');
 emailSubmit.addEventListener('click', function () {
     
     let emailValue = emailBox.value;
-    
+    let emailValid = false;
 
     for (i = 0; i < verifiedEmailList.length; i++){
-        
+        if (emailValue === verifiedEmailList[i]){
+            emailValid = true;
+        }
     }
 
 
-    if (emailValue === verifiedEmailList[i]) {
+    if (emailValid === true) {
             
         document.getElementById('verified-email').innerHTML = `
         <h4 class="text-success">Email verificata!</h4>
